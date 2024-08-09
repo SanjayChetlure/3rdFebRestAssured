@@ -5,8 +5,6 @@ import static io.restassured.RestAssured.*;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
-
-
 public class ex1_getRequest
 {	
 	@Test(priority = 1)
@@ -37,5 +35,4 @@ public class ex1_getRequest
 			.statusCode(404)
 			.log().all();		
 	}
-	
 }

@@ -1,26 +1,54 @@
 {
-	"students":
-	[
-		{
-		"id": 1,
-		"name": "john",
-		"location": "india",
-		"phone": "1111",
-		"courses": [
-					"Java",
-					"Selenium"		
-					]
-		},
-		
-		{
-		"id": 2,
-		"name": "KIM",
-		"location": "US",
-		"phone": "2222",
-		"courses": [
-					"python",
-					"appium"		
-					]
-		}		
-	]
+  "students": [
+    {
+      "id": "1",
+      "name": "john",
+      "location": "india",
+      "phone": "1111",
+      "courses": [
+        "Java",
+        "Selenium"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "KIM",
+      "location": "US",
+      "phone": "2222",
+      "courses": [
+        "python",
+        "appium"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "aditya",
+      "location": "Pune",
+      "phone": 3333,
+      "courses": [
+        "RPA",
+        "Power BI"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "aditya",
+      "location": "Pune",
+      "phone": 3333,
+      "courses": [
+        "RPA",
+        "Power BI"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "aditya",
+      "location": "Pune",
+      "phone": 3333,
+      "courses": [
+        "RPA",
+        "Power BI"
+      ]
+    }
+  ]
 }
