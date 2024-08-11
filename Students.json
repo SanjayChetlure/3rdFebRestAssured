@@ -22,30 +22,10 @@
     },
     {
       "id": "3",
-      "name": "aditya",
+      "name": "Aditya",
       "location": "Pune",
-      "phone": 3333,
-      "courses": [
-        "RPA",
-        "Power BI"
-      ]
-    },
-    {
-      "id": "3",
-      "name": "aditya",
-      "location": "Pune",
-      "phone": 3333,
-      "courses": [
-        "RPA",
-        "Power BI"
-      ]
-    },
-    {
-      "id": "3",
-      "name": "aditya",
-      "location": "Pune",
-      "phone": 3333,
-      "courses": [
+      "phone": "3333",
+      "cources": [
         "RPA",
         "Power BI"
       ]
