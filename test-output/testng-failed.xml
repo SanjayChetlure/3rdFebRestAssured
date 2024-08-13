@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="BasicHttpRequests.Ex_Assignment_Perform_CRUD_Operation_in_singleClass">
+      <class name="P3_Logging_Query_Path_Parameters_Cookies_Headers.ex3_Cookies">
         <methods>
-          <include name="TC2_getSpecificStudentDatails"/>
+          <include name="testCookies"/>
         </methods>
-      </class> <!-- BasicHttpRequests.Ex_Assignment_Perform_CRUD_Operation_in_singleClass -->
+      </class> <!-- P3_Logging_Query_Path_Parameters_Cookies_Headers.ex3_Cookies -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
