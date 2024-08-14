@@ -11,47 +11,43 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 
 public class ex4_Headers
-{
-	
-	//@Test(priority = 1)
+{	
+		//@Test(priority = 1)
 		public void testHeades()	
-	{
+		{
 			given()			
 			.when()
-				.get("https://google.com/")
-			
+				.get("https://google.com/")			
 			.then()
-			.header("Content-Type", "text/html; charset=ISO-8859-1")
-			.header("Content-Encoding", "gzip")
-			.header("Server", "gws")
-			.log().headers();
+				.header("Content-Type", "text/html; charset=ISO-8859-1")
+				.header("Content-Encoding", "gzip")
+				.header("Server", "gws")
+				.log().headers();
 		}
 	
-	//@Test(priority = 2)
+		//@Test(priority = 2)
 		public void getHeadersInfo()
 		{
 			 Response resp = given()			
 			.when()
 				.get("https://google.com/");
 			
-			String header = resp.getHeader("Content-Type");
-			 System.out.println("----Content type----"+header);
+			String headerValue = resp.getHeader("Content-Type");
+			 System.out.println("----Content type----"+headerValue);
 		}
 		
 		
 		@Test(priority = 3)   //not that must useful / as log.all() /log.headers()
 		public void getAllHeadersInfo()
 		{
-			 Response resp = given()
-			
+			 Response resp = given()			
 			.when()
 				.get("https://google.com/");
 			
-			Headers allHeader = resp.getHeaders();
-			
-			for(Header header:allHeader)
+			Headers allHeader = resp.getHeaders();		
+			for(Header s1:allHeader)
 			{
-				System.out.println(header.getName()+" : "+header.getValue());
+				System.out.println(s1.getName()+" : "+s1.getValue());
 			}
 		}
 		
