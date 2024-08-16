@@ -1,15 +1,37 @@
-package P1_BasicHttpRequests;
-
+package P6_Request_Response_Specification;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import java.util.LinkedHashMap;
+
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
-public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass 
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+
+public class Ex_RequestResponseSpec2 
 {
-	String ID="3";
+	String ID;
+	RequestSpecification requestSpecBuilder;
+	ResponseSpecification responseSpecBuilder;
+	ResponseSpecification responseSpecBuilderPost;
 	
-	//@Test(priority = 1)
+	@BeforeClass
+	public void PreCondition() 
+	{
+	   requestSpecBuilder = new RequestSpecBuilder()
+			   .setBaseUri("http://localhost:3000/students").setContentType(ContentType.JSON).build();		
+	
+	   responseSpecBuilder = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+	   responseSpecBuilderPost = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
+		
+	}
+	
+	
+	@Test(priority = 1)
 	public void TC1_postStudentDatails() 
 	{
 		LinkedHashMap map=new LinkedHashMap();
@@ -22,16 +44,14 @@ public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass
 		map.put("courses", courcseNames);
 		
 		ID=given()                              
-			.contentType("application/json") 
+			.spec(requestSpecBuilder)
 			.body(map)
 		.when()                              
-			.post("http://localhost:3000/students")
+			.post()
 		.then()	
-			.statusCode(201)
+			.spec(responseSpecBuilderPost)
 			.log().all()
 			.extract().jsonPath().getString("id");
-		System.out.println(ID);		
-		
 		//get ID & store in global variable
 	}
 	
@@ -40,11 +60,11 @@ public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass
 	{
 		
 		given()                              
-		.contentType("application/json") 
+		.spec(requestSpecBuilder)
 	.when()                              
-		.get("http://localhost:3000/students/"+ID)
+		.get(ID)
 	.then()	
-		.statusCode(200)
+		.spec(responseSpecBuilder)
 		.body("id", equalTo("3"))
 		.body("name", equalTo("aditya"))
 		.body("courses[0]", equalTo("RPA"))
@@ -52,7 +72,7 @@ public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass
 		.log().all();
 	}
 	
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void TC3_UpdateSpecificStudentDatails() 
 	{
 		LinkedHashMap map=new LinkedHashMap();
@@ -65,26 +85,26 @@ public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass
 		map.put("courses", courcseNames);
 		
 		given()                              
-			.contentType("application/json") 
+			.spec(requestSpecBuilder)
 			.body(map)
 		.when()                              
-			.put("http://localhost:3000/students/"+ID)
+			.put(ID)
 		.then()	
-			.statusCode(200)
+			.spec(responseSpecBuilder)
 			.body("name", equalTo("ADITYA"))
 			.log().all();
 	}
 	
 	
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	public void TC3_DeeleteSpecificStudentDatails() 
 	{
 		given()
-			.contentType(ContentType.JSON)
+		.spec(requestSpecBuilder)
 		.when()
-			.delete("http://localhost:3000/students/"+ID)
+			.delete(ID)
 		.then()
-			.statusCode(200);
+			.spec(responseSpecBuilder);
 	}
 	
 	

@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="P4_ParsingJSONData.ParsingJSONResponseData">
+      <class name="P6_Request_Response_Specification.Ex_RequestResponseSpec">
         <methods>
-          <include name="verifyTotalPriceFromResponse"/>
+          <include name="TC3_UpdateSpecificStudentDatails"/>
+          <include name="TC2_getSpecificStudentDatails"/>
+          <include name="TC3_DeeleteSpecificStudentDatails"/>
+          <include name="TC1_postStudentDatails"/>
+          <include name="PreCondition"/>
         </methods>
-      </class> <!-- P4_ParsingJSONData.ParsingJSONResponseData -->
+      </class> <!-- P6_Request_Response_Specification.Ex_RequestResponseSpec -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
