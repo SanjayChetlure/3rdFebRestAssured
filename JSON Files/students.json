@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "john",
+      "location": "india",
+      "phone": "1111",
+      "cources": [
+        "Java",
+        "Selenium"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "KIM",
+      "location": "US",
+      "phone": "2222",
+      "cources": [
+        "python",
+        "appium"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "abc3",
+      "location": "Pune",
+      "phone": "3333",
+      "cources": [
+        "sub1",
+        "sub2"
+      ]
+    }
+  ]
+}

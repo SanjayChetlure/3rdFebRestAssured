@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="P6_Request_Response_Specification.Ex_RequestResponseSpec">
+      <class name="P7_Serialization_And_DeSerialization.ex2_serialization_Deserialization_employee">
         <methods>
-          <include name="TC3_UpdateSpecificStudentDatails"/>
-          <include name="TC2_getSpecificStudentDatails"/>
-          <include name="TC3_DeeleteSpecificStudentDatails"/>
-          <include name="TC1_postStudentDatails"/>
-          <include name="PreCondition"/>
+          <include name="TC3_deserialize"/>
         </methods>
-      </class> <!-- P6_Request_Response_Specification.Ex_RequestResponseSpec -->
+      </class> <!-- P7_Serialization_And_DeSerialization.ex2_serialization_Deserialization_employee -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
