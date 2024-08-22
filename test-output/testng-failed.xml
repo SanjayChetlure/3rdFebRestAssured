@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="P7_Serialization_And_DeSerialization.ex2_serialization_Deserialization_employee">
+      <class name="P8_ReportGenerationUsing_ExtentReporter.Sample2">
         <methods>
-          <include name="TC3_deserialize"/>
+          <include name="TC2"/>
+          <include name="TC1"/>
+          <include name="TC3"/>
         </methods>
-      </class> <!-- P7_Serialization_And_DeSerialization.ex2_serialization_Deserialization_employee -->
+      </class> <!-- P8_ReportGenerationUsing_ExtentReporter.Sample2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

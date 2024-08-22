@@ -3,12 +3,12 @@
 <suite name="Suite">
 
 	<listeners>
-     <listener class-name="Reports.ExtentReportListener"/>
-    </listeners>
+		<listener class-name="P8_ReportGenerationUsing_ExtentReporter.ExtentReportgeneration"/>
+	</listeners>
 
   <test  name="Test">
     <classes>
-      <class name="P1_BasicHttpRequests.Ex_Assignment_Perform_CRUD_Operation_in_singleClass"/>
+      <class name="P8_ReportGenerationUsing_ExtentReporter.Sample1"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
