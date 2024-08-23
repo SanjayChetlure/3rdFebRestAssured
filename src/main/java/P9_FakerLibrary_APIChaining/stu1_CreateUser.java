@@ -29,16 +29,14 @@ public class stu1_CreateUser
 			
 		
 		 String id = given()
-			.contentType("application/json")
-			.body(data.toString())	
-			
-		.when()
-			.post("http://localhost:3000/students")
+				 		.contentType("application/json")
+				 		.body(data.toString())			
+				 	.when()
+				 		.post("http://localhost:3000/students")
 			.jsonPath().getString("id");
 		
 		
-		context.setAttribute("user_id", id);    //access only within test
-		context.getSuite().setAttribute("user_id", id);    //access in complete Suite	
-	
+		//context.setAttribute("student_id", id);    //access only within test
+		context.getSuite().setAttribute("student_id", id);    //access in complete Suite	
 	}
 }

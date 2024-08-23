@@ -18,15 +18,13 @@ public class FakeDataGenerator
 		System.out.println(f.name().username());
 		System.out.println(f.internet().password());
 		
-		System.out.println(f.phoneNumber().cellPhone());
+		System.out.println(f.phoneNumber().subscriberNumber(10));
 		System.out.println(f.internet().emailAddress());
 		
 		System.out.println(f.business().creditCardExpiry());
 		System.out.println(f.business().creditCardNumber());
 		
-		System.out.println(f.color().name());
-		
+		System.out.println(f.color().name());		
 		System.out.println(f.animal().name());
-		
 	}
 }

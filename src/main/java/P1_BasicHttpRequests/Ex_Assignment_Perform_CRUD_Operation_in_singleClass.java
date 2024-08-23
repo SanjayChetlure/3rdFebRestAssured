@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
 public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass 
 {
-	String ID="3";
+	String ID;
 	
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void TC1_postStudentDatails() 
 	{
 		LinkedHashMap map=new LinkedHashMap();
@@ -52,7 +52,7 @@ public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass
 		.log().all();
 	}
 	
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void TC3_UpdateSpecificStudentDatails() 
 	{
 		LinkedHashMap map=new LinkedHashMap();
@@ -76,7 +76,7 @@ public class Ex_Assignment_Perform_CRUD_Operation_in_singleClass
 	}
 	
 	
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	public void TC3_DeeleteSpecificStudentDatails() 
 	{
 		given()

@@ -14,7 +14,7 @@ public class stu3_UpdateUser
 	public void test3_UpdateUser(ITestContext context)
 	{
 		//int id=(String)context.getAttribute("user_id");    //only test
-		String id=(String)context.getSuite().getAttribute("user_id");   //complete suite		
+		String id=(String)context.getSuite().getAttribute("student_id");   //complete suite		
 		
 		Faker f=new Faker();
 		

@@ -12,7 +12,7 @@ public class stu4_DeleteUser
 	public void test4_DeleteUser(ITestContext context)
 	{
 		//int id=(String)context.getAttribute("user_id");    //only test
-		String id=(String)context.getSuite().getAttribute("user_id");   //complte suite
+		String id=(String)context.getSuite().getAttribute("student_id");   //complte suite
 		
 		given()
 			.pathParam("id", id)

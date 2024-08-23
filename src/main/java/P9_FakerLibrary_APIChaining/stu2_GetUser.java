@@ -12,8 +12,8 @@ public class stu2_GetUser
 	@Test
 	public void test2_GetUser(ITestContext context) 
 	{
-		//String id=(String)context.getAttribute("user_id");      //only test
-		String id=(String) context.getSuite().getAttribute("user_id");   //complte suite
+		//String id=(String)context.getAttribute("student_id");      //only test
+		String id=(String) context.getSuite().getAttribute("student_id");   //complte suite
 				
 		given()
 			.pathParam("id", id)
