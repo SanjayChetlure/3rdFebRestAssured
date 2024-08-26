@@ -2,16 +2,38 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-23T20:22:30 IST" name="Default suite" finished-at="2024-08-23T20:22:32 IST" duration-ms="1869">
+  <suite started-at="2024-08-26T20:06:16 IST" name="Default suite" finished-at="2024-08-26T20:06:17 IST" duration-ms="527">
     <groups>
     </groups>
-    <test started-at="2024-08-23T20:22:30 IST" name="Default test" finished-at="2024-08-23T20:22:32 IST" duration-ms="1869">
-      <class name="P10_TypesOfAuthorizations.Ex4_BearerToken_Auththentication">
-        <test-method signature="AuthEx4_BearerToken()[pri:4, instance:P10_TypesOfAuthorizations.Ex4_BearerToken_Auththentication@7c24b813]" started-at="2024-08-23T20:22:30 IST" name="AuthEx4_BearerToken" finished-at="2024-08-23T20:22:32 IST" duration-ms="1834" status="PASS">
+    <test started-at="2024-08-26T20:06:16 IST" name="Default test" finished-at="2024-08-26T20:06:17 IST" duration-ms="527">
+      <class name="P11_DataProvider.StudentsTest">
+        <test-method signature="TC3(java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:P11_DataProvider.StudentsTest@5a56cdac]" started-at="2024-08-26T20:06:17 IST" name="TC3" data-provider="getExcelData" finished-at="2024-08-26T20:06:17 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PATCH]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:3000/friends]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[203]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Gn]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AuthEx4_BearerToken -->
-      </class> <!-- P10_TypesOfAuthorizations.Ex4_BearerToken_Auththentication -->
+        </test-method> <!-- TC3 -->
+      </class> <!-- P11_DataProvider.StudentsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

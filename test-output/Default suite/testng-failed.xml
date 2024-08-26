@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="P8_ReportGenerationUsing_ExtentReporter.Sample2">
+      <class name="P11_DataProvider.StudentsTest">
         <methods>
-          <include name="TC2"/>
           <include name="TC1"/>
-          <include name="TC3"/>
         </methods>
-      </class> <!-- P8_ReportGenerationUsing_ExtentReporter.Sample2 -->
+      </class> <!-- P11_DataProvider.StudentsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

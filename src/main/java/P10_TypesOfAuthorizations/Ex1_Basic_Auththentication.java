@@ -20,5 +20,8 @@ public class Ex1_Basic_Auththentication
 			.body("authenticated", equalTo(true))
 			.log().all();
 	}
+	
+	
+	
 		
 }

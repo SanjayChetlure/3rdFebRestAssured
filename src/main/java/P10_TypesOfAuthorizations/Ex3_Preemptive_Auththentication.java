@@ -6,7 +6,7 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class Authentications
+public class Ex3_Preemptive_Auththentication
 {
 	
 	
@@ -24,47 +24,9 @@ public class Authentications
 	}
 	
 	
-	@Test(priority = 4)
-	public void AuthEx4_BearerToken() 
-	{
-		String bearerToken="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";
-		
-		given()
-			.headers("Authorization", "Bearer "+bearerToken)
-		.when()
-			.get("https://api.github.com/user/repos")
-		.then()
-			.statusCode(200)
-			.log().all();
-	}
-	
-	//@Test(priority = 5)
-	public void AuthEx5_Auth1() 
-	{
-		given()
-			.auth().oauth("ConsumerKey", "ConsumerSecret", "AccessToken", "TokenSecret")
-		.when()
-			.get("request URL")
-		.then()
-			.statusCode(200)
-			.log().all();
-	}
 	
 	
-	//@Test(priority = 6)
-	public void AuthEx6_Auth2() 
-	{
-		given()
-			.auth().oauth2("Auth2 Token")
-		.when()
-			.get("request URL")
-		.then()
-			.statusCode(200)
-			.log().all();
-	}
-	
-	
-	//@Test(priority = 6)
+	@Test(priority = 6)
 	public void AuthEx7_ApiKey2() 
 	{
 		given()
